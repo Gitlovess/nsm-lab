@@ -1,0 +1,10 @@
+# Ignore large PCAP files (add manually or use Git LFS)
+*.pcap
+*.pcapng
+
+# Suricata logs (don't commit live log data)
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

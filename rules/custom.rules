@@ -1,0 +1,16 @@
+# ============================================================
+# Custom Suricata Rules — NSM Lab
+# Path: /var/lib/suricata/rules/custom.rules
+# ============================================================
+
+# Rule 1: Suspicious User-Agent Detection
+# Detects curl-based HTTP clients (non-browser tooling)
+alert http any any -> any any (msg:"Suspicious non-browser HTTP client detected"; content:"curl"; http_user_agent; sid:1000001; rev:1;)
+
+# Rule 2: Internal Port Scan Detection
+# Fires when a host sends 50+ SYN packets internally within 30 seconds
+alert tcp $HOME_NET any -> $HOME_NET any (msg:"Internal Port Scan Detected (SYN Flood)"; flags:S; threshold:type threshold, track by_src, count 50, seconds 30; sid:1000002; rev:1;)
+
+# Rule 3: SMB Enumeration Probe
+# Triggers on any internal connection to Port 445 (SMB) — ransomware indicator
+alert tcp $HOME_NET any -> $HOME_NET 445 (msg:"Potential Ransomware SMB Enumeration Probe"; flags:S; sid:1000003; rev:1;)
