@@ -1,7 +1,6 @@
 # Network Monitoring
 
 **Quick lookup for commands used in video.**  
-**👉 Watch the video first: [Lab 2](https://youtu.be/JSP-yOBRbrg)**
 
 ---
 
