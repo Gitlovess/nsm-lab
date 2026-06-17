@@ -11,22 +11,22 @@ A 3-layer Network Security Monitoring stack built on a virtualized internal netw
 │         Host-Only Network: 192.168.56.0/24  │
 │                                             │
 │  ┌──────────────┐     ┌──────────────────┐  │
-│  │ Ubuntu Desktop│     │   Windows 10     │  │
-│  │  (Attacker)  │     │   (Target)       │  │
+│  │Ubuntu Desktop│     │    Windows 10    │  │
+│  │  (Attacker)  │     │     (Target)     │  │
 │  └──────┬───────┘     └────────┬─────────┘  │
-│         │                      │             │
-│         └──────────┬───────────┘             │
-│                    │                         │
-│         ┌──────────▼──────────┐              │
-│         │  Ubuntu Server      │              │
-│         │  (Monitor - enp0s8) │              │
-│         │  Promiscuous Mode   │              │
-│         │  ┌───────────────┐  │              │
-│         │  │    TShark     │  │ Layer 1      │
-│         │  │    Zeek       │  │ Layer 2      │
-│         │  │    Suricata   │  │ Layer 3      │
-│         │  └───────────────┘  │              │
-│         └─────────────────────┘              │
+│         │                      │            │
+│         └──────────┬───────────┘            │
+│                    │                        │
+│         ┌──────────▼──────────┐             │
+│         │  Ubuntu Server      │             │
+│         │  (Monitor - enp0s8) │             │
+│         │  Promiscuous Mode   │             │
+│         │  ┌───────────────┐  │             │
+│         │  │    TShark     │  │ Layer 1     │
+│         │  │    Zeek       │  │ Layer 2     │
+│         │  │    Suricata   │  │ Layer 3     │
+│         │  └───────────────┘  │             │
+│         └─────────────────────┘             │
 └─────────────────────────────────────────────┘
 ```
 
