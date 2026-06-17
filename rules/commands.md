@@ -1,7 +1,4 @@
 # Network Monitoring
-
-**Quick lookup for commands used in video.**  
-
 ---
 
 ## SSH & Update
